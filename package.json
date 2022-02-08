@@ -1,0 +1,34 @@
+{
+  "name": "remainderapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index",
+    "start:prod": "node index"
+  },
+  "author": "Hyeman Samuel",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "config": "^3.2.5",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^6.4.0",
+    "helmet": "^3.21.3",
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "sequelize": "^7.0.0-alpha.2",
+    "sequelize-cli": "^6.3.0",
+    "uuidv4": "^6.2.12",
+    "winston": "^3.3.3"
+  }
+}
