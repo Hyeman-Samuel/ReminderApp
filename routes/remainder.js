@@ -26,10 +26,12 @@ validateReminder(),async(req,res)=>{
 
 
 
-
-// Router.get("/",async(req,res)=>{ 
-//     response(res,RESPONSETYPE.OK,await getRemindersByPredicate());
-// })
+Router.get("/",async(req,res)=>{ 
+    const user = req.query.user
+    const after = req.query.after 
+    let reminders = await getRemindersByPredicate(user,after);
+    response(res,RESPONSETYPE.OK,reminders);
+})
 
 
 
@@ -38,7 +40,7 @@ validateReminder(),async(req,res)=>{
 
 Router.get("/:id",async(req,res)=>{ 
     const reminder = await getReminderById(req.params.id);
-    if(!reminder)response(res,RESPONSETYPE.NOTFOUND,"Reminder not found.");
+    if(!reminder)response(res,RESPONSETYPE.NOTFOUND,"ID not found");
 
     response(res,RESPONSETYPE.OK,reminder);
 })
